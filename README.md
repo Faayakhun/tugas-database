@@ -30,4 +30,7 @@ WHERE CustomerName = 'B''s Beverages';
 
 Soal Nomor 9 : SELECT Orders.OrderID, Shippers.ShipperName, COUNT (Orders.OrderDate) FROM ((Orders INNER JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID)) WHERE ShipperName = 'United Package' AND OrderDate Between '1996-08-01' AND '1996-08-31'
 
-Soal Nomor 10 : 
+Soal Nomor 10 : SELECT Products.ProductID, Products.ProductName, Categories.CategoryName
+FROM Products
+INNER JOIN Categories ON Products.CategoryID = Categories.CategoryID
+WHERE CategoryName = 'Beverages';
