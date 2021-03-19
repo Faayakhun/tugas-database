@@ -22,4 +22,10 @@ INNER JOIN OrderDetails ON Orders.OrderID = OrderDetails.OrderID)
 INNER JOIN Products ON OrderDetails.ProductID = Products.ProductID)
 WHERE CustomerName = 'Save-a-lot Markets';
 
-Soal Nomor 8 : 
+Soal Nomor 8 : SELECT Orders.OrderID, Customers.CustomerName, SUM (OrderDetails.Quantity)
+FROM ((Orders
+INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID)
+INNER JOIN OrderDetails ON Orders.OrderID = OrderDetails.OrderID)
+WHERE CustomerName = 'B''s Beverages';
+
+Soal Nomor 9 : 
