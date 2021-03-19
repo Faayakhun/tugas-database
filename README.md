@@ -28,4 +28,6 @@ INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID)
 INNER JOIN OrderDetails ON Orders.OrderID = OrderDetails.OrderID)
 WHERE CustomerName = 'B''s Beverages';
 
-Soal Nomor 9 : 
+Soal Nomor 9 : SELECT Orders.OrderID, Shippers.ShipperName, COUNT (Orders.OrderDate) FROM ((Orders INNER JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID)) WHERE ShipperName = 'United Package' AND OrderDate Between '1996-08-01' AND '1996-08-31'
+
+Soal Nomor 10 : 
