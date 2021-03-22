@@ -17,7 +17,9 @@ FROM ((Orders
 INNER JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID))
 WHERE ShipperName = 'Federal Shipping' AND OrderDate < '1996-12-01'
 
-Soal Nomor 7 : INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID)
+Soal Nomor 7 : SELECT Orders.OrderID, Customers.CustomerName, OrderDetails.ProductID,Products.ProductName
+FROM (((Orders
+INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID)
 INNER JOIN OrderDetails ON Orders.OrderID = OrderDetails.OrderID)
 INNER JOIN Products ON OrderDetails.ProductID = Products.ProductID)
 WHERE CustomerName = 'Save-a-lot Markets';
